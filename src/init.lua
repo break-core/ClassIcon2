@@ -3,11 +3,11 @@
 	Created by break-core
 ]]
 
-return function(className: string, iconSize: number, studioTheme: "Light" | "Dark"): string
+return function(className: string, iconSize: number?, studioTheme: "Light" | "Dark"?): string
 	--- Variables
 	className = className
-	iconSize = iconSize
-	studioTheme = studioTheme
+	iconSize = iconSize or 1
+	studioTheme = studioTheme or settings().Studio.Theme.Name
 
 	if className then
 		--- Get the default sized icon
